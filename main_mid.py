@@ -67,8 +67,8 @@ mid = MidiFile()
 track = MidiTrack()
 track_simp = []
 mid.tracks.append(track)
-for i in chans:
-	track.append(Message('program_change', channel=i, program=chans[i], time=0))
+for i in master_chans:
+	track.append(Message('program_change', channel=master_chans[i], program=i, time=0))
 
 
 
